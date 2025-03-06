@@ -1,251 +1,243 @@
-// Products JavaScript for Swagg E-commerce
+// Products JavaScript for TechPro E-commerce
 
 // Produits de démonstration avec images en ligne
 const products = [
     {
         id: 1,
-        name: "Robe fleurie d'été",
-        price: 15000,
-        description: "Une magnifique robe fleurie parfaite pour l'été. Légère et confortable, elle vous accompagnera lors de vos sorties estivales.",
-        image: "https://images.unsplash.com/photo-1612336307429-8a898d10e223?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
-        category: "vetements",
+        name: "PC Gamer RTX 4080",
+        price: 1850000,
+        description: "PC Gamer ultra-performant avec processeur Intel Core i9-13900K, carte graphique NVIDIA RTX 4080 16GB, 32 Go de RAM DDR5, SSD NVMe 2 To, refroidissement liquide et éclairage RGB personnalisable.",
+        image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        category: "ordinateurs",
         featured: true,
         new: true,
-        colors: ["Rouge", "Bleu", "Blanc"],
-        sizes: ["S", "M", "L", "XL"],
+        colors: ["Noir", "Blanc"],
+        sizes: [],
         related: [2, 5, 8]
     },
     {
         id: 2,
-        name: "Sac à main élégant",
-        price: 12000,
-        description: "Un sac à main élégant qui complétera parfaitement votre tenue. Spacieux et pratique avec plusieurs compartiments.",
-        image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-        category: "accessoires",
+        name: "Carte graphique RTX 4070 Ti",
+        price: 750000,
+        description: "Carte graphique NVIDIA GeForce RTX 4070 Ti avec 12 Go de mémoire GDDR6X, ray tracing en temps réel, DLSS 3.0 et performances de jeu exceptionnelles en 4K.",
+        image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        category: "composants",
         featured: true,
-        new: false,
-        colors: ["Noir", "Marron", "Beige"],
+        new: true,
+        colors: ["Noir"],
         sizes: [],
         related: [3, 6, 9]
     },
     {
         id: 3,
-        name: "Blouse en soie",
-        price: 22000,
-        description: "Une blouse en soie élégante et intemporelle. Parfaite pour le bureau ou pour une sortie en ville.",
-        image: "https://images.unsplash.com/photo-1551163943-3f7e29e5ed20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
-        category: "vetements",
+        name: "Processeur AMD Ryzen 9 7950X",
+        price: 350000,
+        description: "Processeur AMD Ryzen 9 7950X avec 16 cœurs et 32 threads, fréquence boost jusqu'à 5,7 GHz, cache L3 de 64 Mo, compatible socket AM5 et PCIe 5.0.",
+        image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        category: "composants",
         featured: true,
         new: false,
-        colors: ["Blanc", "Noir", "Bleu marine"],
-        sizes: ["S", "M", "L"],
+        colors: ["Noir"],
+        sizes: [],
         related: [1, 7, 10]
     },
     {
         id: 4,
-        name: "Boucles d'oreilles pendantes",
-        price: 8000,
-        description: "Des boucles d'oreilles pendantes qui ajouteront une touche d'élégance à votre tenue. Légères et confortables à porter.",
-        image: "https://images.unsplash.com/photo-1630019852942-f89202989a59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+        name: "Écran gaming 32\" 240Hz",
+        price: 450000,
+        description: "Écran gaming 32 pouces incurvé avec résolution QHD (2560x1440), taux de rafraîchissement de 240Hz, temps de réponse de 1ms, compatible G-Sync et HDR 600.",
+        image: "https://images.unsplash.com/photo-1616588589676-62b3bd4ff6d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
         category: "accessoires",
-        featured: false,
-        new: true,
-        colors: ["Or", "Argent"],
+        featured: true,
+        new: false,
+        colors: ["Noir"],
         sizes: [],
-        related: [2, 8, 11]
+        related: [5, 8, 11]
     },
     {
         id: 5,
-        name: "Jupe plissée midi",
-        price: 17000,
-        description: "Une jupe plissée midi élégante et polyvalente. Peut être portée en toute saison.",
-        image: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
-        category: "vetements",
-        featured: false,
-        new: true,
-        colors: ["Noir", "Beige", "Bleu marine"],
-        sizes: ["S", "M", "L"],
-        related: [1, 4, 10]
+        name: "Clavier mécanique RGB",
+        price: 85000,
+        description: "Clavier mécanique gaming avec switches Cherry MX Red, rétroéclairage RGB personnalisable, touches macro programmables et repose-poignets ergonomique.",
+        image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1165&q=80",
+        category: "accessoires",
+        featured: true,
+        new: false,
+        colors: ["Noir", "Blanc"],
+        sizes: [],
+        related: [4, 6, 12]
     },
     {
         id: 6,
-        name: "Collier en perles",
-        price: 13000,
-        description: "Un collier en perles élégant qui ajoutera une touche de sophistication à votre tenue.",
-        image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+        name: "Souris gaming sans fil",
+        price: 65000,
+        description: "Souris gaming sans fil avec capteur optique 25 600 DPI, 8 boutons programmables, éclairage RGB, autonomie de 70 heures et poids ajustable.",
+        image: "https://images.unsplash.com/photo-1527814050087-3793815479db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1128&q=80",
         category: "accessoires",
         featured: false,
-        new: false,
-        colors: ["Blanc", "Rose"],
+        new: true,
+        colors: ["Noir", "Blanc"],
         sizes: [],
-        related: [2, 5, 11]
+        related: [5, 7, 13]
     },
     {
         id: 7,
-        name: "Pantalon taille haute",
-        price: 19000,
-        description: "Un pantalon taille haute élégant et confortable, parfait pour le bureau ou les sorties.",
-        image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-        category: "vetements",
+        name: "Carte mère ASUS ROG Z790",
+        price: 280000,
+        description: "Carte mère ASUS ROG Maximus Z790 Hero avec socket LGA 1700, 4 slots DDR5, PCIe 5.0, Wi-Fi 6E, Bluetooth 5.3, USB 3.2 Gen 2x2 et éclairage Aura Sync RGB.",
+        image: "https://images.unsplash.com/photo-1563770660941-10a63607957a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        category: "composants",
         featured: false,
         new: false,
-        colors: ["Noir", "Beige", "Bleu marine"],
-        sizes: ["S", "M", "L", "XL"],
-        related: [1, 4, 7]
+        colors: ["Noir"],
+        sizes: [],
+        related: [2, 3, 14]
     },
     {
         id: 8,
-        name: "Bracelet en argent",
-        price: 9000,
-        description: "Un bracelet en argent élégant qui complétera parfaitement votre tenue.",
-        image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
-        category: "accessoires",
+        name: "Ordinateur portable gaming",
+        price: 1200000,
+        description: "Ordinateur portable gaming avec écran 17,3\" 165Hz, processeur Intel Core i7-13700H, carte graphique RTX 4070 8GB, 16 Go de RAM DDR5 et SSD NVMe 1 To.",
+        image: "https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1168&q=80",
+        category: "ordinateurs",
         featured: false,
         new: true,
-        colors: ["Argent", "Or"],
+        colors: ["Noir"],
         sizes: [],
-        related: [2, 5, 11]
+        related: [1, 4, 15]
     },
     {
         id: 9,
-        name: "Robe de soirée",
-        price: 28000,
-        description: "Une élégante robe de soirée pour briller lors de vos événements spéciaux.",
-        image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-        category: "vetements",
-        featured: true,
-        new: true,
-        colors: ["Noir", "Rouge", "Bleu nuit"],
-        sizes: ["S", "M", "L"],
-        related: [1, 3, 5]
+        name: "Mémoire RAM DDR5 32GB",
+        price: 120000,
+        description: "Kit mémoire RAM DDR5 32GB (2x16GB) à 6000MHz, CL36, avec dissipateur thermique en aluminium et éclairage RGB synchronisable.",
+        image: "https://images.unsplash.com/photo-1562976540-1502c2145186?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+        category: "composants",
+        featured: false,
+        new: false,
+        colors: ["Noir", "Blanc"],
+        sizes: [],
+        related: [2, 3, 7]
     },
     {
         id: 10,
-        name: "Lunettes de soleil",
-        price: 11000,
-        description: "Des lunettes de soleil tendance pour protéger vos yeux avec style.",
-        image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
-        category: "accessoires",
-        featured: true,
+        name: "SSD NVMe 2TB",
+        price: 150000,
+        description: "SSD NVMe PCIe 4.0 de 2TB avec vitesses de lecture jusqu'à 7000 Mo/s et d'écriture jusqu'à 6500 Mo/s, idéal pour les jeux et applications exigeantes.",
+        image: "https://images.unsplash.com/photo-1597338770339-9d3d5e137e38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        category: "composants",
+        featured: false,
         new: false,
-        colors: ["Noir", "Marron", "Rose"],
+        colors: ["Noir"],
         sizes: [],
-        related: [2, 4, 8]
+        related: [3, 7, 9]
+    },
+    {
+        id: 11,
+        name: "Casque gaming sans fil",
+        price: 95000,
+        description: "Casque gaming sans fil avec son surround 7.1, microphone détachable à réduction de bruit, autonomie de 30 heures et coussinets à mémoire de forme.",
+        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        category: "accessoires",
+        featured: false,
+        new: false,
+        colors: ["Noir", "Blanc"],
+        sizes: [],
+        related: [5, 6, 12]
+    },
+    {
+        id: 12,
+        name: "Tapis de souris XXL",
+        price: 25000,
+        description: "Tapis de souris gaming XXL (900x400mm) avec surface en tissu à faible friction, base antidérapante en caoutchouc et bords cousus anti-effilochage.",
+        image: "https://images.unsplash.com/photo-1616788494707-ec28f08d05a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        category: "accessoires",
+        featured: false,
+        new: false,
+        colors: ["Noir"],
+        sizes: [],
+        related: [5, 6, 11]
     }
 ];
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Display featured products on homepage
-    displayFeaturedProducts();
-    
-    // Check if we're on the products page
-    if (window.location.pathname.includes('products.html')) {
-        // Get URL parameters for filtering
-        const urlParams = new URLSearchParams(window.location.search);
-        const categoryParam = urlParams.get('category');
-        
-        // Display all products with optional category filter
-        displayProducts(categoryParam);
-        
-        // Set up filter and sort functionality
-        setupFilters();
-    }
-    
-    // Check if we're on the product detail page
-    if (window.location.pathname.includes('product-detail.html')) {
-        // Get product ID from URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = parseInt(urlParams.get('id'));
-        
-        // Display product details
-        displayProductDetails(productId);
-    }
-});
-
-// Display featured products on homepage
+// Fonction pour afficher les produits en vedette sur la page d'accueil
 function displayFeaturedProducts() {
     const featuredProductsContainer = document.getElementById('featured-products');
-    if (!featuredProductsContainer) return;
     
-    // Clear loading placeholders
-    featuredProductsContainer.innerHTML = '';
-    
-    // Filter featured products
-    const featuredProducts = products.filter(product => product.featured);
-    
-    // Display each featured product
-    featuredProducts.forEach(product => {
-        const productCard = createProductCard(product);
-        featuredProductsContainer.appendChild(productCard);
-    });
+    if (featuredProductsContainer) {
+        // Vider le conteneur des produits en vedette
+        featuredProductsContainer.innerHTML = '';
+        
+        // Filtrer les produits en vedette
+        const featuredProducts = products.filter(product => product.featured);
+        
+        // Afficher les produits en vedette
+        featuredProducts.forEach(product => {
+            const productCard = createProductCard(product);
+            featuredProductsContainer.appendChild(productCard);
+        });
+    }
 }
 
-// Display all products with optional category filter
+// Fonction pour afficher les produits sur la page des produits
 function displayProducts(category = null) {
     const productsContainer = document.getElementById('products-container');
-    if (!productsContainer) return;
     
-    // Clear container
-    productsContainer.innerHTML = '';
-    
-    // Filter products by category if specified
-    let filteredProducts = products;
-    if (category) {
-        filteredProducts = products.filter(product => product.category === category);
+    if (productsContainer) {
+        // Vider le conteneur des produits
+        productsContainer.innerHTML = '';
         
-        // Update category title
-        const categoryTitle = document.getElementById('category-title');
-        if (categoryTitle) {
-            const categoryName = getCategoryName(category);
-            categoryTitle.textContent = categoryName;
+        // Filtrer les produits par catégorie si nécessaire
+        let filteredProducts = products;
+        if (category) {
+            filteredProducts = products.filter(product => product.category === category);
+            
+            // Mettre à jour le titre de la catégorie
+            const categoryTitle = document.getElementById('category-title');
+            if (categoryTitle) {
+                categoryTitle.textContent = getCategoryName(category);
+            }
         }
-    }
-    
-    // Display each product
-    filteredProducts.forEach(product => {
-        const productCard = createProductCard(product);
-        productsContainer.appendChild(productCard);
-    });
-    
-    // Update product count
-    const productCount = document.getElementById('product-count');
-    if (productCount) {
-        productCount.textContent = `${filteredProducts.length} produits`;
+        
+        // Afficher les produits
+        filteredProducts.forEach(product => {
+            const productCard = createProductCard(product);
+            productsContainer.appendChild(productCard);
+        });
     }
 }
 
-// Create a product card element
+// Fonction pour créer une carte de produit
 function createProductCard(product) {
     const card = document.createElement('div');
     card.className = 'product-card shadow-md';
     
-    // Create card content
+    // Formater le prix
+    const formattedPrice = product.price.toLocaleString() + ' FCFA';
+    
     card.innerHTML = `
         <div class="product-image-container">
             <img src="${product.image}" alt="${product.name}" class="product-image">
             ${product.new ? '<span class="product-badge">Nouveau</span>' : ''}
             <div class="product-actions">
-                <button class="w-full bg-white text-pink-600 hover:bg-pink-600 hover:text-white transition py-2 rounded-full font-medium add-to-cart-btn" data-id="${product.id}">
-                    Ajouter au panier
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md transition" onclick="window.swaggCart.addToCart(${product.id}, '${product.name}', ${product.price}, '${product.image}')">
+                    <i class="fas fa-shopping-cart mr-2"></i> Ajouter au panier
                 </button>
             </div>
         </div>
         <div class="p-4">
-            <h3 class="text-lg font-medium text-gray-800 mb-1">${product.name}</h3>
-            <p class="text-pink-600 font-bold">${product.price.toLocaleString()} FCFA</p>
+            <h3 class="text-lg font-semibold text-gray-800 mb-1">${product.name}</h3>
+            <p class="text-blue-600 font-bold">${formattedPrice}</p>
+            <a href="product-detail.html?id=${product.id}" class="mt-2 inline-block text-sm text-blue-600 hover:text-blue-800 transition">
+                Voir les détails <i class="fas fa-chevron-right text-xs ml-1"></i>
+            </a>
         </div>
     `;
     
-    // Add event listener to the "Add to Cart" button
-    card.querySelector('.add-to-cart-btn').addEventListener('click', function(e) {
-        e.preventDefault();
-        window.swaggCart.addToCart(product.id, product.name, product.price, product.image);
-    });
-    
-    // Add event listener to navigate to product detail page
-    card.querySelector('.product-image-container').addEventListener('click', function(e) {
-        // Don't navigate if clicking the add to cart button
-        if (!e.target.classList.contains('add-to-cart-btn')) {
+    // Ajouter un événement de clic pour rediriger vers la page de détails du produit
+    card.addEventListener('click', function(e) {
+        // Ne pas rediriger si le clic est sur le bouton d'ajout au panier
+        if (!e.target.closest('button')) {
             window.location.href = `product-detail.html?id=${product.id}`;
         }
     });
@@ -253,208 +245,183 @@ function createProductCard(product) {
     return card;
 }
 
-// Display product details on product detail page
+// Fonction pour afficher les détails d'un produit
 function displayProductDetails(productId) {
-    const product = products.find(p => p.id === productId);
-    if (!product) return;
+    const product = products.find(p => p.id === parseInt(productId));
     
-    // Update page title
-    document.title = `${product.name} - Swagg`;
-    
-    // Update product details
-    const productImage = document.getElementById('product-image');
-    const productName = document.getElementById('product-name');
-    const productPrice = document.getElementById('product-price');
-    const productDescription = document.getElementById('product-description');
-    const colorOptions = document.getElementById('color-options');
-    const sizeOptions = document.getElementById('size-options');
-    
-    if (productImage) productImage.src = product.image;
-    if (productName) productName.textContent = product.name;
-    if (productPrice) productPrice.textContent = `${product.price.toLocaleString()} FCFA`;
-    if (productDescription) productDescription.textContent = product.description;
-    
-    // Populate color options
-    if (colorOptions && product.colors) {
-        colorOptions.innerHTML = '';
-        product.colors.forEach(color => {
-            const colorOption = document.createElement('div');
-            colorOption.className = 'color-option cursor-pointer border-2 border-transparent hover:border-gray-400 rounded-full p-1';
-            colorOption.innerHTML = `
-                <span class="block w-6 h-6 rounded-full bg-${getColorClass(color)}"></span>
-            `;
-            colorOption.setAttribute('data-color', color);
-            colorOptions.appendChild(colorOption);
-        });
+    if (product) {
+        // Mettre à jour les éléments de la page avec les détails du produit
+        const productImage = document.getElementById('product-image');
+        const productName = document.getElementById('product-name');
+        const productPrice = document.getElementById('product-price');
+        const productDescription = document.getElementById('product-description');
+        const productCategory = document.getElementById('product-category');
+        const colorOptions = document.getElementById('color-options');
+        const addToCartBtn = document.getElementById('add-to-cart-btn');
         
-        // Select first color by default
-        const firstColorOption = colorOptions.querySelector('.color-option');
-        if (firstColorOption) {
-            firstColorOption.classList.add('border-gray-800');
-        }
-    }
-    
-    // Populate size options
-    if (sizeOptions && product.sizes) {
-        sizeOptions.innerHTML = '';
-        product.sizes.forEach(size => {
-            const sizeOption = document.createElement('div');
-            sizeOption.className = 'size-option cursor-pointer border border-gray-300 hover:border-gray-800 rounded-md px-3 py-1 text-center';
-            sizeOption.textContent = size;
-            sizeOption.setAttribute('data-size', size);
-            sizeOptions.appendChild(sizeOption);
-        });
+        if (productImage) productImage.src = product.image;
+        if (productName) productName.textContent = product.name;
+        if (productPrice) productPrice.textContent = product.price.toLocaleString() + ' FCFA';
+        if (productDescription) productDescription.textContent = product.description;
+        if (productCategory) productCategory.textContent = getCategoryName(product.category);
         
-        // Select first size by default
-        const firstSizeOption = sizeOptions.querySelector('.size-option');
-        if (firstSizeOption) {
-            firstSizeOption.classList.add('bg-gray-800', 'text-white');
-        }
-    }
-    
-    // Add to cart button functionality
-    const addToCartBtn = document.getElementById('add-to-cart-btn');
-    const quantityInput = document.getElementById('quantity');
-    
-    if (addToCartBtn) {
-        addToCartBtn.addEventListener('click', function() {
-            const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
-            const selectedColor = colorOptions ? colorOptions.querySelector('.border-gray-800').getAttribute('data-color') : null;
-            const selectedSize = sizeOptions ? sizeOptions.querySelector('.bg-gray-800').getAttribute('data-size') : null;
+        // Afficher les options de couleur
+        if (colorOptions) {
+            colorOptions.innerHTML = '';
             
-            // Add to cart with selected options
-            window.swaggCart.addToCart(product.id, product.name, product.price, product.image, quantity);
-        });
+            product.colors.forEach(color => {
+                const colorOption = document.createElement('div');
+                colorOption.className = `w-8 h-8 rounded-full cursor-pointer border-2 border-transparent hover:border-blue-600 ${getColorClass(color)}`;
+                colorOption.setAttribute('data-color', color);
+                colorOption.addEventListener('click', function() {
+                    // Supprimer la classe active de toutes les options
+                    document.querySelectorAll('#color-options > div').forEach(opt => {
+                        opt.classList.remove('border-blue-600');
+                        opt.classList.add('border-transparent');
+                    });
+                    
+                    // Ajouter la classe active à l'option sélectionnée
+                    this.classList.remove('border-transparent');
+                    this.classList.add('border-blue-600');
+                });
+                
+                colorOptions.appendChild(colorOption);
+            });
+        }
+        
+        // Configurer le bouton d'ajout au panier
+        if (addToCartBtn) {
+            addToCartBtn.onclick = function() {
+                // Récupérer la quantité
+                const quantityInput = document.getElementById('quantity');
+                const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
+                
+                // Ajouter au panier
+                window.swaggCart.addToCart(product.id, product.name, product.price, product.image, quantity);
+            };
+        }
+        
+        // Afficher les produits associés
+        displayRelatedProducts(product);
     }
-    
-    // Display related products
-    displayRelatedProducts(product);
 }
 
-// Display related products on product detail page
+// Fonction pour afficher les produits associés
 function displayRelatedProducts(currentProduct) {
     const relatedProductsContainer = document.getElementById('related-products');
-    if (!relatedProductsContainer) return;
     
-    // Get products in the same category
-    const relatedProducts = products
-        .filter(product => product.category === currentProduct.category && product.id !== currentProduct.id)
-        .slice(0, 4); // Limit to 4 related products
-    
-    // Clear container
-    relatedProductsContainer.innerHTML = '';
-    
-    // Display each related product
-    relatedProducts.forEach(product => {
-        const productCard = createProductCard(product);
-        relatedProductsContainer.appendChild(productCard);
-    });
+    if (relatedProductsContainer && currentProduct.related) {
+        // Vider le conteneur
+        relatedProductsContainer.innerHTML = '';
+        
+        // Récupérer les produits associés
+        const relatedProducts = products.filter(product => currentProduct.related.includes(product.id));
+        
+        // Afficher les produits associés
+        relatedProducts.forEach(product => {
+            const productCard = createProductCard(product);
+            relatedProductsContainer.appendChild(productCard);
+        });
+    }
 }
 
-// Set up filter and sort functionality on products page
+// Fonction pour configurer les filtres sur la page des produits
 function setupFilters() {
-    const categoryFilters = document.querySelectorAll('.category-filter');
-    const sortSelect = document.getElementById('sort-select');
+    // Récupérer les paramètres de l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
     
-    // Category filter functionality
+    // Afficher les produits filtrés par catégorie si nécessaire
+    if (categoryParam) {
+        displayProducts(categoryParam);
+        
+        // Mettre à jour le filtre de catégorie actif
+        const categoryFilters = document.querySelectorAll('.category-filter');
+        categoryFilters.forEach(filter => {
+            if (filter.getAttribute('data-category') === categoryParam) {
+                filter.classList.add('bg-blue-600', 'text-white');
+                filter.classList.remove('bg-gray-200', 'text-gray-800');
+            }
+        });
+    } else {
+        displayProducts();
+    }
+    
+    // Ajouter des événements de clic aux filtres de catégorie
+    const categoryFilters = document.querySelectorAll('.category-filter');
     categoryFilters.forEach(filter => {
         filter.addEventListener('click', function() {
             const category = this.getAttribute('data-category');
             
-            // Update active filter
-            categoryFilters.forEach(f => f.classList.remove('bg-pink-600', 'text-white'));
-            this.classList.add('bg-pink-600', 'text-white');
+            // Mettre à jour l'URL
+            const url = new URL(window.location);
+            if (category) {
+                url.searchParams.set('category', category);
+            } else {
+                url.searchParams.delete('category');
+            }
+            window.history.pushState({}, '', url);
             
-            // Display filtered products
-            displayProducts(category === 'all' ? null : category);
+            // Mettre à jour les filtres actifs
+            categoryFilters.forEach(f => {
+                f.classList.remove('bg-blue-600', 'text-white');
+                f.classList.add('bg-gray-200', 'text-gray-800');
+            });
+            
+            this.classList.remove('bg-gray-200', 'text-gray-800');
+            this.classList.add('bg-blue-600', 'text-white');
+            
+            // Afficher les produits filtrés
+            displayProducts(category);
         });
     });
-    
-    // Sort functionality
-    if (sortSelect) {
-        sortSelect.addEventListener('change', function() {
-            const sortBy = this.value;
-            const urlParams = new URLSearchParams(window.location.search);
-            const categoryParam = urlParams.get('category');
-            
-            // Get filtered products
-            let filteredProducts = products;
-            if (categoryParam) {
-                filteredProducts = products.filter(product => product.category === categoryParam);
-            }
-            
-            // Sort products
-            switch (sortBy) {
-                case 'price-asc':
-                    filteredProducts.sort((a, b) => a.price - b.price);
-                    break;
-                case 'price-desc':
-                    filteredProducts.sort((a, b) => b.price - a.price);
-                    break;
-                case 'name-asc':
-                    filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
-                    break;
-                case 'name-desc':
-                    filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
-                    break;
-                case 'newest':
-                    filteredProducts.sort((a, b) => (b.new ? 1 : 0) - (a.new ? 1 : 0));
-                    break;
-            }
-            
-            // Display sorted products
-            const productsContainer = document.getElementById('products-container');
-            if (productsContainer) {
-                productsContainer.innerHTML = '';
-                filteredProducts.forEach(product => {
-                    const productCard = createProductCard(product);
-                    productsContainer.appendChild(productCard);
-                });
-            }
-        });
-    }
 }
 
-// Helper function to get category name from category slug
+// Fonction pour obtenir le nom de la catégorie
 function getCategoryName(category) {
     switch (category) {
-        case 'vetements':
-            return 'Vêtements';
+        case 'ordinateurs':
+            return 'Ordinateurs';
+        case 'composants':
+            return 'Composants';
         case 'accessoires':
             return 'Accessoires';
-        case 'chaussures':
-            return 'Chaussures';
         default:
             return 'Tous les produits';
     }
 }
 
-// Helper function to get Tailwind color class from color name
+// Fonction pour obtenir la classe de couleur
 function getColorClass(color) {
     switch (color.toLowerCase()) {
         case 'noir':
-            return 'black';
+            return 'bg-gray-900';
         case 'blanc':
-            return 'white';
+            return 'bg-white';
         case 'rouge':
-            return 'red-500';
+            return 'bg-red-600';
         case 'bleu':
-            return 'blue-500';
-        case 'bleu marine':
-            return 'blue-900';
-        case 'rose':
-            return 'pink-500';
-        case 'beige':
-            return 'yellow-100';
-        case 'marron':
-            return 'yellow-800';
-        case 'or':
-            return 'yellow-500';
-        case 'argent':
-            return 'gray-300';
-        case 'rose gold':
-            return 'pink-300';
+            return 'bg-blue-600';
+        case 'vert':
+            return 'bg-green-600';
         default:
-            return 'gray-500';
+            return 'bg-gray-500';
     }
-} 
+}
+
+// Initialiser les fonctions au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+    // Afficher les produits en vedette sur la page d'accueil
+    displayFeaturedProducts();
+    
+    // Configurer les filtres sur la page des produits
+    setupFilters();
+    
+    // Afficher les détails du produit si on est sur la page de détail
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+    
+    if (productId) {
+        displayProductDetails(productId);
+    }
+}); 

@@ -1,4 +1,4 @@
-// Main JavaScript for Swagg E-commerce
+// Main JavaScript for TechPro E-commerce
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
@@ -16,20 +16,46 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update cart count
     updateCartCount();
+    
+    // Add tech hover effects to buttons
+    addTechEffects();
 });
+
+// Add tech hover effects to buttons and cards
+function addTechEffects() {
+    // Add pulse effect to featured products
+    const featuredProducts = document.querySelectorAll('.product-card');
+    featuredProducts.forEach((product, index) => {
+        // Add a slight delay to each product for a staggered effect
+        setTimeout(() => {
+            product.classList.add('fade-in');
+        }, index * 100);
+    });
+    
+    // Add glow effect to primary buttons on hover
+    const primaryButtons = document.querySelectorAll('.bg-blue-600');
+    primaryButtons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+            this.classList.add('tech-glow');
+        });
+        button.addEventListener('mouseleave', function() {
+            this.classList.remove('tech-glow');
+        });
+    });
+}
 
 // Cart functionality
 let cart = [];
 
 function initializeCart() {
-    const savedCart = localStorage.getItem('swaggCart');
+    const savedCart = localStorage.getItem('techProCart');
     if (savedCart) {
         cart = JSON.parse(savedCart);
     }
 }
 
 function saveCart() {
-    localStorage.setItem('swaggCart', JSON.stringify(cart));
+    localStorage.setItem('techProCart', JSON.stringify(cart));
     updateCartCount();
 }
 
@@ -38,6 +64,13 @@ function updateCartCount() {
     if (cartCountElement) {
         const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
         cartCountElement.textContent = itemCount;
+        
+        // Add pulse animation if cart has items
+        if (itemCount > 0) {
+            cartCountElement.classList.add('pulse');
+        } else {
+            cartCountElement.classList.remove('pulse');
+        }
     }
 }
 
@@ -99,10 +132,17 @@ function getCartTotal() {
 function showNotification(message, type = 'success') {
     // Create notification element
     const notification = document.createElement('div');
-    notification.className = `fixed bottom-4 right-4 px-6 py-3 rounded-lg shadow-lg ${
-        type === 'success' ? 'bg-green-500' : 'bg-red-500'
+    notification.className = `fixed bottom-4 right-4 px-6 py-3 rounded-md shadow-lg ${
+        type === 'success' ? 'bg-blue-600' : 'bg-red-600'
     } text-white z-50 transform transition-all duration-500 translate-y-20 opacity-0`;
-    notification.textContent = message;
+    
+    // Add tech-styled content
+    notification.innerHTML = `
+        <div class="flex items-center">
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'} mr-3 text-xl"></i>
+            <p>${message}</p>
+        </div>
+    `;
     
     // Add to DOM
     document.body.appendChild(notification);
@@ -126,7 +166,7 @@ function sendWhatsAppOrder(orderDetails) {
     const phoneNumber = '237679257080'; // MTN number
     
     // Format the message
-    let message = `*Nouvelle commande de Swagg*\n\n`;
+    let message = `*Nouvelle commande de TechPro*\n\n`;
     message += `*Informations client:*\n`;
     message += `Nom: ${orderDetails.name}\n`;
     message += `Téléphone: ${orderDetails.phone}\n`;

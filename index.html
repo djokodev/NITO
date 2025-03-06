@@ -3,74 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swagg - Boutique en ligne</title>
+    <title>NITO'S STORE - Boutique en ligne</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-gray-900 shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="index.html" class="flex items-center">
-                    <img src="Swagg.jpg" alt="Swagg Logo" class="h-12 mr-3">
-                    <span class="text-2xl font-bold text-pink-600">Swagg</span>
+                    <span class="text-2xl font-bold text-blue-500">NITO'S STORE</span>
                 </a>
             </div>
             
             <nav class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-pink-600 font-medium hover:text-pink-800 transition">Accueil</a>
-                <a href="pages/products.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Produits</a>
-                <a href="pages/about.html" class="text-gray-700 font-medium hover:text-pink-600 transition">À propos</a>
-                <a href="pages/contact.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+                <a href="index.html" class="text-blue-500 font-medium hover:text-blue-400 transition">Accueil</a>
+                <a href="pages/products.html" class="text-gray-300 font-medium hover:text-blue-500 transition">Produits</a>
+                <a href="pages/about.html" class="text-gray-300 font-medium hover:text-blue-500 transition">À propos</a>
+                <a href="pages/contact.html" class="text-gray-300 font-medium hover:text-blue-500 transition">Contact</a>
             </nav>
             
             <div class="flex items-center space-x-4">
                 <a href="pages/cart.html" class="relative">
-                    <i class="fas fa-shopping-bag text-gray-700 text-xl hover:text-pink-600 transition"></i>
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    <i class="fas fa-shopping-cart text-gray-300 text-xl hover:text-blue-500 transition"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
                 </a>
-                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-pink-600 focus:outline-none">
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-blue-500 focus:outline-none">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800 border-t border-gray-700">
             <div class="container mx-auto px-4 py-2 space-y-2">
-                <a href="index.html" class="block py-2 text-pink-600 font-medium">Accueil</a>
-                <a href="pages/products.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Produits</a>
-                <a href="pages/about.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">À propos</a>
-                <a href="pages/contact.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+                <a href="index.html" class="block py-2 text-blue-500 font-medium">Accueil</a>
+                <a href="pages/products.html" class="block py-2 text-gray-300 font-medium hover:text-blue-500 transition">Produits</a>
+                <a href="pages/about.html" class="block py-2 text-gray-300 font-medium hover:text-blue-500 transition">À propos</a>
+                <a href="pages/contact.html" class="block py-2 text-gray-300 font-medium hover:text-blue-500 transition">Contact</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-pink-50 to-purple-50 py-16">
+    <section class="bg-gradient-to-r from-gray-900 to-blue-900 py-16">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-8 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Découvrez votre style avec <span class="text-pink-600">Swagg</span></h1>
-                <p class="text-lg text-gray-600 mb-6">Des vêtements et accessoires tendance pour exprimer votre personnalité.</p>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Équipez-vous avec <span class="text-blue-500">NITO'S STORE</span></h1>
+                <p class="text-lg text-gray-300 mb-6">Des ordinateurs et composants électroniques de haute performance pour les gamers et professionnels exigeants.</p>
                 <div class="flex space-x-4">
-                    <a href="pages/products.html" class="bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-6 rounded-full transition shadow-md hover:shadow-lg">
+                    <a href="pages/products.html" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition shadow-md hover:shadow-lg">
                         Voir nos produits
                     </a>
-                    <a href="pages/about.html" class="bg-white hover:bg-gray-100 text-pink-600 font-medium py-3 px-6 rounded-full transition border border-pink-600 shadow-md hover:shadow-lg">
+                    <a href="pages/about.html" class="bg-transparent hover:bg-blue-800 text-blue-400 font-medium py-3 px-6 rounded-md transition border border-blue-600 shadow-md hover:shadow-lg hover:text-white">
                         En savoir plus
                     </a>
                 </div>
             </div>
             <div class="md:w-1/2">
-                <img src="images/imageHero.jpg">
+                <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Setup gaming performant" class="rounded-lg shadow-xl">
             </div>
         </div>
     </section>
 
     <!-- Featured Products -->
-    <section class="py-16">
+    <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nos produits populaires</h2>
             
@@ -99,7 +98,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="pages/products.html" class="inline-block bg-white hover:bg-gray-100 text-pink-600 font-medium py-3 px-8 rounded-full transition border border-pink-600 shadow-md hover:shadow-lg">
+                <a href="pages/products.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-md transition shadow-md hover:shadow-lg">
                     Voir tous les produits
                 </a>
             </div>
@@ -107,18 +106,30 @@
     </section>
 
     <!-- Categories -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nos catégories</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <a href="pages/products.html?category=vetements" class="group">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="pages/products.html?category=ordinateurs" class="group">
                     <div class="relative overflow-hidden rounded-lg shadow-lg h-80">
-                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=705&q=80" alt="Vêtements" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1593640495253-23196b27a87f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1168&q=80" alt="Ordinateurs" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                             <div class="p-6">
-                                <h3 class="text-2xl font-bold text-white mb-2">Vêtements</h3>
-                                <p class="text-white/80">Découvrez notre collection tendance</p>
+                                <h3 class="text-2xl font-bold text-white mb-2">Ordinateurs</h3>
+                                <p class="text-white/80">Découvrez notre gamme d'ordinateurs performants</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="pages/products.html?category=composants" class="group">
+                    <div class="relative overflow-hidden rounded-lg shadow-lg h-80">
+                        <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Composants" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-white mb-2">Composants</h3>
+                                <p class="text-white/80">Améliorez votre setup avec nos composants de qualité</p>
                             </div>
                         </div>
                     </div>
@@ -126,11 +137,11 @@
                 
                 <a href="pages/products.html?category=accessoires" class="group">
                     <div class="relative overflow-hidden rounded-lg shadow-lg h-80">
-                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Accessoires" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                        <img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Accessoires" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-white mb-2">Accessoires</h3>
-                                <p class="text-white/80">Complétez votre style avec nos accessoires</p>
+                                <p class="text-white/80">Complétez votre setup avec nos accessoires gaming</p>
                             </div>
                         </div>
                     </div>
@@ -140,7 +151,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-16">
+    <section class="py-16 bg-gray-100">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Ce que nos clients disent</h2>
             
@@ -155,12 +166,12 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4">"J'adore les vêtements de Swagg ! La qualité est excellente et les designs sont uniques. Je reçois toujours des compliments quand je porte leurs articles."</p>
+                    <p class="text-gray-600 mb-4">"J'adore mon nouvel ordinateur de TechPro ! La performance est excellente pour mes sessions de gaming et le rapport qualité-prix est imbattable. Le service client a été très professionnel."</p>
                     <div class="flex items-center">
-                        <div class="w-10 h-10 bg-pink-200 rounded-full flex items-center justify-center text-pink-600 font-bold mr-3">S</div>
+                        <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-600 font-bold mr-3">T</div>
                         <div>
-                            <h4 class="font-medium text-gray-800">Sophie M.</h4>
-                            <p class="text-sm text-gray-500">Cliente fidèle</p>
+                            <h4 class="font-medium text-gray-800">Thomas M.</h4>
+                            <p class="text-sm text-gray-500">Gamer passionné</p>
                         </div>
                     </div>
                 </div>
@@ -175,12 +186,12 @@
                             <i class="fas fa-star"></i>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4">"Le service client est impeccable et la livraison est rapide. Les produits sont exactement comme sur les photos. Je recommande vivement !"</p>
+                    <p class="text-gray-600 mb-4">"Le service client est impeccable et la livraison est rapide. Les composants sont exactement comme décrits et l'assemblage a été très simple. Je recommande vivement !"</p>
                     <div class="flex items-center">
-                        <div class="w-10 h-10 bg-blue-200 rounded-full flex items-center justify-center text-blue-600 font-bold mr-3">M</div>
+                        <div class="w-10 h-10 bg-indigo-200 rounded-full flex items-center justify-center text-indigo-600 font-bold mr-3">M</div>
                         <div>
-                            <h4 class="font-medium text-gray-800">Marie L.</h4>
-                            <p class="text-sm text-gray-500">Cliente satisfaite</p>
+                            <h4 class="font-medium text-gray-800">Marc L.</h4>
+                            <p class="text-sm text-gray-500">Professionnel IT</p>
                         </div>
                     </div>
                 </div>
@@ -195,12 +206,12 @@
                             <i class="fas fa-star-half-alt"></i>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-4">"J'ai acheté plusieurs accessoires et ils sont tous de très bonne qualité. Le rapport qualité-prix est excellent. Je reviendrai !"</p>
+                    <p class="text-gray-600 mb-4">"J'ai acheté plusieurs composants pour mon PC gaming et ils sont tous de très bonne qualité. Le rapport qualité-prix est excellent. Je reviendrai pour mon prochain setup !"</p>
                     <div class="flex items-center">
                         <div class="w-10 h-10 bg-green-200 rounded-full flex items-center justify-center text-green-600 font-bold mr-3">C</div>
                         <div>
-                            <h4 class="font-medium text-gray-800">Camille T.</h4>
-                            <p class="text-sm text-gray-500">Nouvelle cliente</p>
+                            <h4 class="font-medium text-gray-800">Charles T.</h4>
+                            <p class="text-sm text-gray-500">Streamer</p>
                         </div>
                     </div>
                 </div>
@@ -213,8 +224,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Swagg</h3>
-                    <p class="text-gray-400 mb-4">Votre boutique en ligne pour des vêtements et accessoires tendance qui vous permettent d'exprimer votre style unique.</p>
+                    <h3 class="text-xl font-bold mb-4">NITO'S STORE</h3>
+                    <p class="text-gray-400 mb-4">Votre boutique en ligne pour des ordinateurs et composants électroniques de haute performance qui répondent à tous vos besoins technologiques.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition">
                             <i class="fab fa-facebook-f"></i>
@@ -258,20 +269,20 @@
                         <li class="flex items-start">
                             <i class="fas fa-phone mt-1 mr-2"></i>
                             <div>
-                                <p>Orange: +237 694 938 602</p>
-                                <p>MTN: +237 679 257 080</p>
+                                <p>Orange: +237 xxx xxx xxx</p>
+                                <p>MTN: +237 xxx xxx xxx</p>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-2"></i>
-                            <span>contact@swagg.com</span>
+                            <span>contact@nitosstore.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Swagg. Tous droits réservés.</p>
+                <p>&copy; 2025 NITO'S STORE. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

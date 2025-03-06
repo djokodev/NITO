@@ -1,11 +1,11 @@
-# Swagg E-commerce Website
+# TechPro E-commerce Website
 
-Un site e-commerce moderne et élégant pour la boutique Swagg, spécialisée dans les vêtements et accessoires pour femmes.
+Un site e-commerce moderne et performant pour TechPro, spécialisé dans la vente d'ordinateurs, composants électroniques et accessoires gaming.
 
 ## Fonctionnalités
 
-- **Design moderne et responsive** : Interface utilisateur élégante et adaptée à tous les appareils
-- **Présentation des produits** : Mise en valeur des produits avec images, descriptions et options
+- **Design moderne et responsive** : Interface utilisateur tech/gaming adaptée à tous les appareils
+- **Présentation des produits** : Mise en valeur des produits high-tech avec images, descriptions détaillées et spécifications techniques
 - **Panier d'achat** : Ajout, modification et suppression de produits dans le panier
 - **Système de commande** : Processus de commande simple avec options de livraison
 - **Options de paiement multiples** : 
@@ -22,11 +22,12 @@ Un site e-commerce moderne et élégant pour la boutique Swagg, spécialisée da
 - JavaScript (Vanilla JS)
 - Font Awesome pour les icônes
 - LocalStorage pour la gestion du panier
+- Animations et effets visuels personnalisés
 
 ## Structure du projet
 
 ```
-swagg-teresa/
+techpro/
 ├── index.html              # Page d'accueil
 ├── css/
 │   └── styles.css          # Styles personnalisés
@@ -34,9 +35,7 @@ swagg-teresa/
 │   ├── main.js             # Fonctionnalités principales
 │   └── products.js         # Gestion des produits
 ├── images/                 # Images du site et des produits
-│   ├── logo.png
-│   ├── hero-image.jpg
-│   ├── products/
+│   ├── logo.jpg
 │   └── ...
 └── pages/
     ├── products.html       # Page de liste des produits
@@ -60,18 +59,35 @@ Aucune installation supplémentaire n'est nécessaire car le site utilise des CD
 
 Pour ajouter de nouveaux produits, modifiez le fichier `js/products.js` en ajoutant de nouvelles entrées au tableau `products`.
 
+Exemple de structure d'un produit :
+```javascript
+{
+    id: 13,
+    name: "Nom du produit",
+    price: 150000,
+    description: "Description détaillée du produit avec spécifications techniques.",
+    image: "URL de l'image",
+    category: "ordinateurs", // ou "composants" ou "accessoires"
+    featured: false,
+    new: true,
+    colors: ["Noir", "Blanc"],
+    sizes: [],
+    related: [5, 6, 11] // IDs des produits associés
+}
+```
+
 ### Modifier les informations de contact
 
 Les informations de contact peuvent être modifiées dans les sections footer de chaque page HTML.
 
 ### Changer les couleurs du thème
 
-Le thème utilise principalement des couleurs roses (pink-600) pour l'identité visuelle. Pour modifier ces couleurs, recherchez les classes Tailwind correspondantes dans les fichiers HTML.
+Le thème utilise principalement des couleurs bleues (blue-600) et des dégradés de gris foncé pour l'identité visuelle tech/gaming. Pour modifier ces couleurs, recherchez les classes Tailwind correspondantes dans les fichiers HTML et CSS.
 
 ## Auteur
 
-Développé pour Swagg - Touossido Djoko Teresa Dalvina
+Développé pour TechPro - Touossido Djoko Teresa Dalvina
 
 ## Licence
 
-Tous droits réservés © 2023 Swagg 
+Tous droits réservés © 2023 TechPro 

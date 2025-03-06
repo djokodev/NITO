@@ -1,30 +1,35 @@
-/* Custom styles for Swagg E-commerce */
+/* Custom styles for TechPro E-commerce */
 
 /* Custom fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
 
 /* Base styles */
 body {
     font-family: 'Poppins', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rajdhani', sans-serif;
+}
+
 /* Product card styles */
 .product-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 0.5rem;
+    border-radius: 0.375rem;
     overflow: hidden;
     background-color: white;
 }
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .product-image-container {
     position: relative;
     overflow: hidden;
-    padding-top: 125%; /* 4:5 aspect ratio */
+    padding-top: 100%; /* 1:1 aspect ratio */
 }
 
 .product-image {
@@ -45,12 +50,12 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #ec4899;
+    background-color: #3b82f6;
     color: white;
     font-size: 0.75rem;
     font-weight: 600;
     padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
+    border-radius: 0.25rem;
     z-index: 10;
 }
 
@@ -60,7 +65,7 @@ body {
     left: 0;
     right: 0;
     padding: 1rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -73,31 +78,31 @@ body {
 
 /* Button styles */
 .btn-primary {
-    background-color: #ec4899;
+    background-color: #3b82f6;
     color: white;
     font-weight: 500;
     padding: 0.5rem 1.5rem;
-    border-radius: 9999px;
+    border-radius: 0.375rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-primary:hover {
-    background-color: #db2777;
+    background-color: #2563eb;
     transform: translateY(-2px);
 }
 
 .btn-outline {
     background-color: transparent;
-    color: #ec4899;
+    color: #3b82f6;
     font-weight: 500;
     padding: 0.5rem 1.5rem;
-    border-radius: 9999px;
-    border: 1px solid #ec4899;
+    border-radius: 0.375rem;
+    border: 1px solid #3b82f6;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-outline:hover {
-    background-color: #ec4899;
+    background-color: #3b82f6;
     color: white;
     transform: translateY(-2px);
 }
@@ -113,8 +118,8 @@ body {
 
 .form-control:focus {
     outline: none;
-    border-color: #ec4899;
-    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
 }
 
 /* Cart styles */
@@ -172,6 +177,26 @@ body {
     font-weight: 500;
 }
 
+/* Custom styles for tech/gaming aesthetic */
+.tech-gradient {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.tech-card {
+    background: #1e293b;
+    border-radius: 0.375rem;
+    border: 1px solid #3b82f6;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+.tech-glow {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.tech-border {
+    border: 1px solid #3b82f6;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -186,6 +211,22 @@ body {
 
 .fade-in {
     animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
 }
 
 /* Responsive adjustments */
