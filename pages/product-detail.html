@@ -3,60 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détail du produit - Swagg</title>
+    <title>Détail du produit - NITO'S STORE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="bg-gray-900 shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
                 <a href="../index.html" class="flex items-center">
-                    <img src="../Swagg.jpg" alt="Swagg Logo" class="h-12 mr-3">
-                    <span class="text-2xl font-bold text-pink-600">Swagg</span>
+                    <span class="text-2xl font-bold text-blue-500">NITO'S STORE</span>
                 </a>
             </div>
             
             <nav class="hidden md:flex space-x-8">
-                <a href="../index.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Accueil</a>
-                <a href="products.html" class="text-pink-600 font-medium hover:text-pink-800 transition">Produits</a>
-                <a href="about.html" class="text-gray-700 font-medium hover:text-pink-600 transition">À propos</a>
-                <a href="contact.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+                <a href="../index.html" class="text-gray-300 font-medium hover:text-blue-500 transition">Accueil</a>
+                <a href="products.html" class="text-blue-500 font-medium hover:text-blue-400 transition">Produits</a>
+                <a href="about.html" class="text-gray-300 font-medium hover:text-blue-500 transition">À propos</a>
+                <a href="contact.html" class="text-gray-300 font-medium hover:text-blue-500 transition">Contact</a>
             </nav>
             
             <div class="flex items-center space-x-4">
                 <a href="cart.html" class="relative">
-                    <i class="fas fa-shopping-bag text-gray-700 text-xl hover:text-pink-600 transition"></i>
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    <i class="fas fa-shopping-cart text-gray-300 text-xl hover:text-blue-500 transition"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
                 </a>
-                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-pink-600 focus:outline-none">
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-blue-500 focus:outline-none">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-800 border-t border-gray-700">
             <div class="container mx-auto px-4 py-2 space-y-2">
-                <a href="../index.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Accueil</a>
-                <a href="products.html" class="block py-2 text-pink-600 font-medium">Produits</a>
-                <a href="about.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">À propos</a>
-                <a href="contact.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+                <a href="../index.html" class="block py-2 text-gray-300 font-medium hover:text-blue-500 transition">Accueil</a>
+                <a href="products.html" class="block py-2 text-blue-500 font-medium">Produits</a>
+                <a href="about.html" class="block py-2 text-gray-300 font-medium hover:text-blue-500 transition">À propos</a>
+                <a href="contact.html" class="block py-2 text-gray-300 font-medium hover:text-blue-500 transition">Contact</a>
             </div>
         </div>
     </header>
 
     <!-- Breadcrumb -->
-    <div class="bg-gray-100 py-3">
+    <div class="bg-gray-800 py-3">
         <div class="container mx-auto px-4">
-            <div class="flex items-center text-sm text-gray-600">
-                <a href="../index.html" class="hover:text-pink-600 transition">Accueil</a>
+            <div class="flex items-center text-sm text-gray-400">
+                <a href="../index.html" class="hover:text-blue-400 transition">Accueil</a>
                 <span class="mx-2">/</span>
-                <a href="products.html" class="hover:text-pink-600 transition">Produits</a>
+                <a href="products.html" class="hover:text-blue-400 transition">Produits</a>
                 <span class="mx-2">/</span>
-                <span id="product-name-breadcrumb" class="text-gray-800 font-medium">Détail du produit</span>
+                <span id="product-name-breadcrumb" class="text-gray-200 font-medium">Détail du produit</span>
             </div>
         </div>
     </div>
@@ -64,75 +63,127 @@
     <!-- Product Detail -->
     <section class="py-12">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row -mx-4">
+            <div class="flex flex-col lg:flex-row -mx-4">
                 <!-- Product Images -->
-                <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+                <div class="lg:w-3/5 px-4 mb-8 lg:mb-0">
                     <div class="sticky top-24">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                            <img id="product-image" src="../images/products/placeholder.jpg" alt="Product" class="w-full h-auto">
+                        <!-- Main Image -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md mb-4">
+                            <img id="main-product-image" src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Product" class="w-full h-auto object-cover">
+                        </div>
+                        
+                        <!-- Thumbnail Images -->
+                        <div class="grid grid-cols-4 gap-2" id="product-thumbnails">
+                            <div class="cursor-pointer border-2 border-blue-500 rounded-md overflow-hidden thumbnail-item" data-image="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80">
+                                <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Vue principale" class="w-full h-20 object-cover">
+                            </div>
+                            <div class="cursor-pointer border-2 border-transparent rounded-md overflow-hidden thumbnail-item" data-image="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                                <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Vue arrière" class="w-full h-20 object-cover">
+                            </div>
+                            <div class="cursor-pointer border-2 border-transparent rounded-md overflow-hidden thumbnail-item" data-image="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Vue composants" class="w-full h-20 object-cover">
+                            </div>
+                            <div class="cursor-pointer border-2 border-transparent rounded-md overflow-hidden thumbnail-item" data-image="https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+                                <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Vue détaillée" class="w-full h-20 object-cover">
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Product Info -->
-                <div class="md:w-1/2 px-4">
-                    <h1 id="product-name" class="text-3xl font-bold text-gray-800 mb-4">Nom du produit</h1>
-                    <p id="product-price" class="text-2xl font-bold text-pink-600 mb-6">0 FCFA</p>
-                    
-                    <div class="mb-6">
-                        <p id="product-description" class="text-gray-600 leading-relaxed">
-                            Description du produit...
-                        </p>
-                    </div>
-                    
-                    <!-- Color Options -->
-                    <div class="mb-6">
-                        <h3 class="text-sm font-medium text-gray-900 mb-2">Couleur</h3>
-                        <div id="color-options" class="flex space-x-2">
-                            <!-- Color options will be added dynamically -->
+                <div class="lg:w-2/5 px-4">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="mb-2">
+                            <span id="product-category" class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Catégorie</span>
+                            <span id="product-new" class="inline-block bg-green-100 text-green-800 text-xs font-semibold ml-2 px-2.5 py-0.5 rounded hidden">Nouveau</span>
                         </div>
-                    </div>
-                    
-                    <!-- Size Options -->
-                    <div class="mb-6">
-                        <h3 class="text-sm font-medium text-gray-900 mb-2">Taille</h3>
-                        <div id="size-options" class="flex flex-wrap gap-2">
-                            <!-- Size options will be added dynamically -->
-                        </div>
-                    </div>
-                    
-                    <!-- Quantity -->
-                    <div class="mb-8">
-                        <h3 class="text-sm font-medium text-gray-900 mb-2">Quantité</h3>
-                        <div class="flex items-center">
-                            <button id="decrease-quantity" class="w-10 h-10 bg-gray-100 rounded-l-md flex items-center justify-center hover:bg-gray-200 transition">
-                                <i class="fas fa-minus text-gray-600"></i>
-                            </button>
-                            <input id="quantity" type="number" min="1" value="1" class="w-16 h-10 border-y border-gray-300 text-center focus:outline-none">
-                            <button id="increase-quantity" class="w-10 h-10 bg-gray-100 rounded-r-md flex items-center justify-center hover:bg-gray-200 transition">
-                                <i class="fas fa-plus text-gray-600"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Add to Cart Button -->
-                    <button id="add-to-cart-btn" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-6 rounded-md transition mb-4">
-                        Ajouter au panier
-                    </button>
-                    
-                    <!-- Additional Info -->
-                    <div class="border-t border-gray-200 pt-6 mt-6">
+                        
+                        <h1 id="product-name" class="text-3xl font-bold text-gray-800 mb-4">Nom du produit</h1>
                         <div class="flex items-center mb-4">
-                            <i class="fas fa-truck text-gray-400 mr-3"></i>
-                            <span class="text-gray-600">Livraison disponible dans tout le Cameroun</span>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 ml-2">(24 avis)</span>
                         </div>
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-exchange-alt text-gray-400 mr-3"></i>
-                            <span class="text-gray-600">Retours acceptés sous 7 jours</span>
+                        
+                        <p id="product-price" class="text-2xl font-bold text-blue-600 mb-6">0 FCFA</p>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Description</h3>
+                            <p id="product-description" class="text-gray-600 leading-relaxed">
+                                Description du produit...
+                            </p>
                         </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-shield-alt text-gray-400 mr-3"></i>
-                            <span class="text-gray-600">Paiement sécurisé</span>
+                        
+                        <!-- Specifications -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Spécifications</h3>
+                            <ul class="space-y-2 text-gray-600" id="product-specs">
+                                <li class="flex">
+                                    <span class="font-medium w-1/3">Processeur:</span>
+                                    <span>Intel Core i9-13900K</span>
+                                </li>
+                                <li class="flex">
+                                    <span class="font-medium w-1/3">Carte graphique:</span>
+                                    <span>NVIDIA RTX 4080 16GB</span>
+                                </li>
+                                <li class="flex">
+                                    <span class="font-medium w-1/3">Mémoire:</span>
+                                    <span>32 Go DDR5</span>
+                                </li>
+                                <li class="flex">
+                                    <span class="font-medium w-1/3">Stockage:</span>
+                                    <span>SSD NVMe 2 To</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Color Options -->
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Couleur</h3>
+                            <div id="color-options" class="flex space-x-3">
+                                <!-- Color options will be added dynamically -->
+                            </div>
+                        </div>
+                        
+                        <!-- Quantity -->
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Quantité</h3>
+                            <div class="flex items-center">
+                                <button id="decrease-quantity" class="w-10 h-10 bg-gray-200 rounded-l-md flex items-center justify-center hover:bg-gray-300 transition">
+                                    <i class="fas fa-minus text-gray-600"></i>
+                                </button>
+                                <input id="quantity" type="number" min="1" value="1" class="w-16 h-10 border-y border-gray-300 text-center focus:outline-none">
+                                <button id="increase-quantity" class="w-10 h-10 bg-gray-200 rounded-r-md flex items-center justify-center hover:bg-gray-300 transition">
+                                    <i class="fas fa-plus text-gray-600"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Add to Cart Button -->
+                        <button id="add-to-cart-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition mb-4 flex items-center justify-center">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Ajouter au panier
+                        </button>
+                        
+                        <!-- Additional Info -->
+                        <div class="border-t border-gray-200 pt-6 mt-6">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-truck text-blue-500 mr-3"></i>
+                                <span class="text-gray-600">Livraison disponible dans tout le Cameroun</span>
+                            </div>
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-shield-alt text-blue-500 mr-3"></i>
+                                <span class="text-gray-600">Garantie 12 mois</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-credit-card text-blue-500 mr-3"></i>
+                                <span class="text-gray-600">Paiement sécurisé</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -140,7 +191,7 @@
             
             <!-- Related Products -->
             <div class="mt-16">
-                <h2 class="text-2xl font-bold text-gray-800 mb-8">Vous pourriez aussi aimer</h2>
+                <h2 class="text-2xl font-bold text-gray-800 mb-8">Produits similaires</h2>
                 <div id="related-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Related products will be added dynamically -->
                 </div>
@@ -153,8 +204,8 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Swagg</h3>
-                    <p class="text-gray-400 mb-4">Votre boutique en ligne pour des vêtements et accessoires tendance qui vous permettent d'exprimer votre style unique.</p>
+                    <h3 class="text-xl font-bold mb-4">NITO'S STORE</h3>
+                    <p class="text-gray-400 mb-4">Votre boutique en ligne pour des ordinateurs et composants électroniques de haute performance qui répondent à tous vos besoins technologiques.</p>
                     <div class="flex space-x-4">
                         <a href="#" class="text-gray-400 hover:text-white transition">
                             <i class="fab fa-facebook-f"></i>
@@ -198,20 +249,20 @@
                         <li class="flex items-start">
                             <i class="fas fa-phone mt-1 mr-2"></i>
                             <div>
-                                <p>Orange: +237 694 938 602</p>
-                                <p>MTN: +237 679 257 080</p>
+                                <p>Orange: +237 xxx xxx xxx</p>
+                                <p>MTN: +237 xxx xxx xxx</p>
                             </div>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope mt-1 mr-2"></i>
-                            <span>contact@swagg.com</span>
+                            <span>contact@nitosstore.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2023 Swagg. Tous droits réservés.</p>
+                <p>&copy; 2025 NITO'S STORE. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -220,8 +271,17 @@
     <script src="../js/main.js"></script>
     <script src="../js/products.js"></script>
     <script>
-        // Quantity controls
         document.addEventListener('DOMContentLoaded', function() {
+            // Get URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            
+            if (productId) {
+                // Load product details
+                displayProductDetails(productId);
+            }
+            
+            // Quantity controls
             const quantityInput = document.getElementById('quantity');
             const decreaseBtn = document.getElementById('decrease-quantity');
             const increaseBtn = document.getElementById('increase-quantity');
@@ -247,30 +307,118 @@
                 });
             }
             
-            // Color options
-            const colorOptions = document.querySelectorAll('.color-option');
-            colorOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    // Remove selected class from all options
-                    colorOptions.forEach(opt => opt.classList.remove('border-gray-800'));
-                    // Add selected class to clicked option
-                    this.classList.add('border-gray-800');
+            // Thumbnail image gallery
+            const thumbnails = document.querySelectorAll('.thumbnail-item');
+            const mainImage = document.getElementById('main-product-image');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Update main image
+                    const imageUrl = this.getAttribute('data-image');
+                    mainImage.src = imageUrl;
+                    
+                    // Update active thumbnail
+                    thumbnails.forEach(thumb => {
+                        thumb.classList.remove('border-blue-500');
+                        thumb.classList.add('border-transparent');
+                    });
+                    this.classList.remove('border-transparent');
+                    this.classList.add('border-blue-500');
                 });
             });
             
-            // Size options
-            const sizeOptions = document.querySelectorAll('.size-option');
-            sizeOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    // Remove selected class from all options
-                    sizeOptions.forEach(opt => {
-                        opt.classList.remove('bg-gray-800', 'text-white');
-                    });
-                    // Add selected class to clicked option
-                    this.classList.add('bg-gray-800', 'text-white');
+            // Add product-specific images when product is loaded
+            function updateProductImages(product) {
+                // This function would be called after the product data is loaded
+                // It would update the thumbnail images with product-specific images
+                // For now, we'll use placeholder images
+                
+                // In a real implementation, you would have multiple images per product
+                // and would update the thumbnails and main image accordingly
+            }
+            
+            // Add to cart functionality
+            const addToCartBtn = document.getElementById('add-to-cart-btn');
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', function() {
+                    const quantity = parseInt(document.getElementById('quantity').value);
+                    
+                    // Get product data from the page
+                    const productName = document.getElementById('product-name').textContent;
+                    const productPrice = parseFloat(document.getElementById('product-price').textContent.replace(/[^\d]/g, ''));
+                    const productImage = document.getElementById('main-product-image').src;
+                    
+                    // Add to cart
+                    window.swaggCart.addToCart(parseInt(productId), productName, productPrice, productImage, quantity);
                 });
-            });
+            }
         });
+        
+        // Function to display product specifications
+        function displayProductSpecs(product) {
+            const specsContainer = document.getElementById('product-specs');
+            if (!specsContainer) return;
+            
+            // Clear existing specs
+            specsContainer.innerHTML = '';
+            
+            // Add specs based on product category
+            if (product.category === 'ordinateurs') {
+                // For computers
+                const specs = [
+                    { name: 'Processeur', value: product.description.match(/processeur\s+([^,]+)/i)?.[1] || 'Non spécifié' },
+                    { name: 'Carte graphique', value: product.description.match(/carte graphique\s+([^,]+)/i)?.[1] || 'Non spécifié' },
+                    { name: 'Mémoire', value: product.description.match(/(\d+\s*Go\s*de\s*RAM)/i)?.[1] || 'Non spécifié' },
+                    { name: 'Stockage', value: product.description.match(/(SSD\s+\d+\s*To)/i)?.[1] || 'Non spécifié' }
+                ];
+                
+                specs.forEach(spec => {
+                    const li = document.createElement('li');
+                    li.className = 'flex';
+                    li.innerHTML = `
+                        <span class="font-medium w-1/3">${spec.name}:</span>
+                        <span>${spec.value}</span>
+                    `;
+                    specsContainer.appendChild(li);
+                });
+            } else if (product.category === 'composants') {
+                // For components
+                const specs = [
+                    { name: 'Type', value: product.name.split(' ')[0] || 'Non spécifié' },
+                    { name: 'Modèle', value: product.name.split(' ').slice(1).join(' ') || 'Non spécifié' },
+                    { name: 'Performance', value: product.description.match(/(\d+\s*[GHzMB]+)/i)?.[1] || 'Non spécifié' },
+                    { name: 'Compatibilité', value: product.description.match(/(compatible\s+[^,\.]+)/i)?.[1] || 'Non spécifié' }
+                ];
+                
+                specs.forEach(spec => {
+                    const li = document.createElement('li');
+                    li.className = 'flex';
+                    li.innerHTML = `
+                        <span class="font-medium w-1/3">${spec.name}:</span>
+                        <span>${spec.value}</span>
+                    `;
+                    specsContainer.appendChild(li);
+                });
+            } else {
+                // For accessories
+                const specs = [
+                    { name: 'Type', value: product.name.split(' ')[0] || 'Non spécifié' },
+                    { name: 'Connectivité', value: product.description.match(/(sans fil|filaire)/i)?.[1] || 'Non spécifié' },
+                    { name: 'Interface', value: product.description.match(/(USB|HDMI|DisplayPort|Bluetooth)/i)?.[1] || 'Non spécifié' },
+                    { name: 'Compatibilité', value: 'Windows, macOS, Linux' }
+                ];
+                
+                specs.forEach(spec => {
+                    const li = document.createElement('li');
+                    li.className = 'flex';
+                    li.innerHTML = `
+                        <span class="font-medium w-1/3">${spec.name}:</span>
+                        <span>${spec.value}</span>
+                    `;
+                    specsContainer.appendChild(li);
+                });
+            }
+        }
     </script>
 </body>
 </html> 

@@ -8,11 +8,24 @@ const products = [
         price: 1850000,
         description: "PC Gamer ultra-performant avec processeur Intel Core i9-13900K, carte graphique NVIDIA RTX 4080 16GB, 32 Go de RAM DDR5, SSD NVMe 2 To, refroidissement liquide et éclairage RGB personnalisable.",
         image: "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
+            "https://images.unsplash.com/photo-1547082299-de196ea013d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        ],
         category: "ordinateurs",
         featured: true,
         new: true,
         colors: ["Noir", "Blanc"],
-        sizes: [],
+        specs: {
+            processeur: "Intel Core i9-13900K",
+            carte_graphique: "NVIDIA RTX 4080 16GB",
+            memoire: "32 Go DDR5",
+            stockage: "SSD NVMe 2 To",
+            refroidissement: "Watercooling",
+            alimentation: "850W Gold"
+        },
         related: [2, 5, 8]
     },
     {
@@ -21,11 +34,24 @@ const products = [
         price: 750000,
         description: "Carte graphique NVIDIA GeForce RTX 4070 Ti avec 12 Go de mémoire GDDR6X, ray tracing en temps réel, DLSS 3.0 et performances de jeu exceptionnelles en 4K.",
         image: "https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1591488320449-011701bb6704?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1592155931584-901ac15763e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1175&q=80",
+            "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+        ],
         category: "composants",
         featured: true,
         new: true,
         colors: ["Noir"],
-        sizes: [],
+        specs: {
+            modele: "NVIDIA GeForce RTX 4070 Ti",
+            memoire: "12 Go GDDR6X",
+            interface: "PCIe 4.0",
+            sorties: "HDMI 2.1, 3x DisplayPort 1.4a",
+            tdp: "285W",
+            alimentation_recommandee: "750W"
+        },
         related: [3, 6, 9]
     },
     {
@@ -34,11 +60,25 @@ const products = [
         price: 350000,
         description: "Processeur AMD Ryzen 9 7950X avec 16 cœurs et 32 threads, fréquence boost jusqu'à 5,7 GHz, cache L3 de 64 Mo, compatible socket AM5 et PCIe 5.0.",
         image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        images: [
+            "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1562976540-1502c2145186?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
+            "https://images.unsplash.com/photo-1555680202-c86f0e12f086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+            "https://images.unsplash.com/photo-1592155931584-901ac15763e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1175&q=80"
+        ],
         category: "composants",
         featured: true,
         new: false,
         colors: ["Noir"],
-        sizes: [],
+        specs: {
+            modele: "AMD Ryzen 9 7950X",
+            coeurs: "16 cœurs / 32 threads",
+            frequence_base: "4.5 GHz",
+            frequence_boost: "5.7 GHz",
+            cache: "64 Mo L3",
+            tdp: "170W",
+            socket: "AM5"
+        },
         related: [1, 7, 10]
     },
     {
@@ -204,6 +244,12 @@ function displayProducts(category = null) {
             const productCard = createProductCard(product);
             productsContainer.appendChild(productCard);
         });
+        
+        // Mettre à jour le compteur de produits
+        const productCount = document.getElementById('product-count');
+        if (productCount) {
+            productCount.textContent = `${filteredProducts.length} produits`;
+        }
     }
 }
 
@@ -250,20 +296,41 @@ function displayProductDetails(productId) {
     const product = products.find(p => p.id === parseInt(productId));
     
     if (product) {
+        // Mettre à jour le titre de la page
+        document.title = `${product.name} - NITO'S STORE`;
+        
         // Mettre à jour les éléments de la page avec les détails du produit
-        const productImage = document.getElementById('product-image');
+        const mainProductImage = document.getElementById('main-product-image');
         const productName = document.getElementById('product-name');
+        const productNameBreadcrumb = document.getElementById('product-name-breadcrumb');
         const productPrice = document.getElementById('product-price');
         const productDescription = document.getElementById('product-description');
         const productCategory = document.getElementById('product-category');
+        const productNew = document.getElementById('product-new');
         const colorOptions = document.getElementById('color-options');
         const addToCartBtn = document.getElementById('add-to-cart-btn');
         
-        if (productImage) productImage.src = product.image;
+        if (mainProductImage) mainProductImage.src = product.image;
         if (productName) productName.textContent = product.name;
+        if (productNameBreadcrumb) productNameBreadcrumb.textContent = product.name;
         if (productPrice) productPrice.textContent = product.price.toLocaleString() + ' FCFA';
         if (productDescription) productDescription.textContent = product.description;
         if (productCategory) productCategory.textContent = getCategoryName(product.category);
+        
+        // Afficher le badge "Nouveau" si le produit est nouveau
+        if (productNew) {
+            if (product.new) {
+                productNew.classList.remove('hidden');
+            } else {
+                productNew.classList.add('hidden');
+            }
+        }
+        
+        // Mettre à jour les images du produit
+        updateProductImages(product);
+        
+        // Afficher les spécifications du produit
+        displayProductSpecs(product);
         
         // Afficher les options de couleur
         if (colorOptions) {
@@ -287,6 +354,13 @@ function displayProductDetails(productId) {
                 
                 colorOptions.appendChild(colorOption);
             });
+            
+            // Sélectionner la première couleur par défaut
+            const firstColorOption = colorOptions.querySelector('div');
+            if (firstColorOption) {
+                firstColorOption.classList.remove('border-transparent');
+                firstColorOption.classList.add('border-blue-600');
+            }
         }
         
         // Configurer le bouton d'ajout au panier
@@ -304,6 +378,71 @@ function displayProductDetails(productId) {
         // Afficher les produits associés
         displayRelatedProducts(product);
     }
+}
+
+// Fonction pour mettre à jour les images du produit
+function updateProductImages(product) {
+    const thumbnailsContainer = document.getElementById('product-thumbnails');
+    const mainImage = document.getElementById('main-product-image');
+    
+    if (!thumbnailsContainer || !mainImage || !product.images || product.images.length === 0) return;
+    
+    // Vider le conteneur des miniatures
+    thumbnailsContainer.innerHTML = '';
+    
+    // Définir l'image principale
+    mainImage.src = product.images[0];
+    
+    // Ajouter les miniatures
+    product.images.forEach((imageUrl, index) => {
+        const thumbnailDiv = document.createElement('div');
+        thumbnailDiv.className = `cursor-pointer border-2 ${index === 0 ? 'border-blue-500' : 'border-transparent'} rounded-md overflow-hidden thumbnail-item`;
+        thumbnailDiv.setAttribute('data-image', imageUrl);
+        
+        thumbnailDiv.innerHTML = `
+            <img src="${imageUrl}" alt="${product.name} - Vue ${index + 1}" class="w-full h-20 object-cover">
+        `;
+        
+        thumbnailDiv.addEventListener('click', function() {
+            // Mettre à jour l'image principale
+            mainImage.src = imageUrl;
+            
+            // Mettre à jour la miniature active
+            document.querySelectorAll('.thumbnail-item').forEach(thumb => {
+                thumb.classList.remove('border-blue-500');
+                thumb.classList.add('border-transparent');
+            });
+            this.classList.remove('border-transparent');
+            this.classList.add('border-blue-500');
+        });
+        
+        thumbnailsContainer.appendChild(thumbnailDiv);
+    });
+}
+
+// Fonction pour afficher les spécifications du produit
+function displayProductSpecs(product) {
+    const specsContainer = document.getElementById('product-specs');
+    if (!specsContainer || !product.specs) return;
+    
+    // Vider le conteneur des spécifications
+    specsContainer.innerHTML = '';
+    
+    // Ajouter les spécifications
+    Object.entries(product.specs).forEach(([key, value]) => {
+        const li = document.createElement('li');
+        li.className = 'flex';
+        
+        // Formater le nom de la spécification
+        const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        
+        li.innerHTML = `
+            <span class="font-medium w-1/3">${formattedKey}:</span>
+            <span>${value}</span>
+        `;
+        
+        specsContainer.appendChild(li);
+    });
 }
 
 // Fonction pour afficher les produits associés
@@ -375,6 +514,49 @@ function setupFilters() {
             displayProducts(category);
         });
     });
+    
+    // Ajouter la fonctionnalité de tri
+    const sortSelect = document.getElementById('sort-select');
+    if (sortSelect) {
+        sortSelect.addEventListener('change', function() {
+            const sortBy = this.value;
+            let filteredProducts = [...products];
+            
+            // Filtrer par catégorie si nécessaire
+            if (categoryParam) {
+                filteredProducts = filteredProducts.filter(product => product.category === categoryParam);
+            }
+            
+            // Trier les produits
+            switch (sortBy) {
+                case 'price-asc':
+                    filteredProducts.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-desc':
+                    filteredProducts.sort((a, b) => b.price - a.price);
+                    break;
+                case 'name-asc':
+                    filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                case 'name-desc':
+                    filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
+                    break;
+                case 'newest':
+                    filteredProducts.sort((a, b) => (b.new ? 1 : 0) - (a.new ? 1 : 0));
+                    break;
+            }
+            
+            // Afficher les produits triés
+            const productsContainer = document.getElementById('products-container');
+            if (productsContainer) {
+                productsContainer.innerHTML = '';
+                filteredProducts.forEach(product => {
+                    const productCard = createProductCard(product);
+                    productsContainer.appendChild(productCard);
+                });
+            }
+        });
+    }
 }
 
 // Fonction pour obtenir le nom de la catégorie
