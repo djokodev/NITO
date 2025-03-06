@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du produit - Swagg</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../Swagg.jpg" alt="Swagg Logo" class="h-12 mr-3">
+                    <span class="text-2xl font-bold text-pink-600">Swagg</span>
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Accueil</a>
+                <a href="products.html" class="text-pink-600 font-medium hover:text-pink-800 transition">Produits</a>
+                <a href="about.html" class="text-gray-700 font-medium hover:text-pink-600 transition">À propos</a>
+                <a href="contact.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <a href="cart.html" class="relative">
+                    <i class="fas fa-shopping-bag text-gray-700 text-xl hover:text-pink-600 transition"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-pink-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 space-y-2">
+                <a href="../index.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Accueil</a>
+                <a href="products.html" class="block py-2 text-pink-600 font-medium">Produits</a>
+                <a href="about.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">À propos</a>
+                <a href="contact.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-3">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="../index.html" class="hover:text-pink-600 transition">Accueil</a>
+                <span class="mx-2">/</span>
+                <a href="products.html" class="hover:text-pink-600 transition">Produits</a>
+                <span class="mx-2">/</span>
+                <span id="product-name-breadcrumb" class="text-gray-800 font-medium">Détail du produit</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row -mx-4">
+                <!-- Product Images -->
+                <div class="md:w-1/2 px-4 mb-8 md:mb-0">
+                    <div class="sticky top-24">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img id="product-image" src="../images/products/placeholder.jpg" alt="Product" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Info -->
+                <div class="md:w-1/2 px-4">
+                    <h1 id="product-name" class="text-3xl font-bold text-gray-800 mb-4">Nom du produit</h1>
+                    <p id="product-price" class="text-2xl font-bold text-pink-600 mb-6">0 FCFA</p>
+                    
+                    <div class="mb-6">
+                        <p id="product-description" class="text-gray-600 leading-relaxed">
+                            Description du produit...
+                        </p>
+                    </div>
+                    
+                    <!-- Color Options -->
+                    <div class="mb-6">
+                        <h3 class="text-sm font-medium text-gray-900 mb-2">Couleur</h3>
+                        <div id="color-options" class="flex space-x-2">
+                            <!-- Color options will be added dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Size Options -->
+                    <div class="mb-6">
+                        <h3 class="text-sm font-medium text-gray-900 mb-2">Taille</h3>
+                        <div id="size-options" class="flex flex-wrap gap-2">
+                            <!-- Size options will be added dynamically -->
+                        </div>
+                    </div>
+                    
+                    <!-- Quantity -->
+                    <div class="mb-8">
+                        <h3 class="text-sm font-medium text-gray-900 mb-2">Quantité</h3>
+                        <div class="flex items-center">
+                            <button id="decrease-quantity" class="w-10 h-10 bg-gray-100 rounded-l-md flex items-center justify-center hover:bg-gray-200 transition">
+                                <i class="fas fa-minus text-gray-600"></i>
+                            </button>
+                            <input id="quantity" type="number" min="1" value="1" class="w-16 h-10 border-y border-gray-300 text-center focus:outline-none">
+                            <button id="increase-quantity" class="w-10 h-10 bg-gray-100 rounded-r-md flex items-center justify-center hover:bg-gray-200 transition">
+                                <i class="fas fa-plus text-gray-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Add to Cart Button -->
+                    <button id="add-to-cart-btn" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-6 rounded-md transition mb-4">
+                        Ajouter au panier
+                    </button>
+                    
+                    <!-- Additional Info -->
+                    <div class="border-t border-gray-200 pt-6 mt-6">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-truck text-gray-400 mr-3"></i>
+                            <span class="text-gray-600">Livraison disponible dans tout le Cameroun</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-exchange-alt text-gray-400 mr-3"></i>
+                            <span class="text-gray-600">Retours acceptés sous 7 jours</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-gray-400 mr-3"></i>
+                            <span class="text-gray-600">Paiement sécurisé</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products -->
+            <div class="mt-16">
+                <h2 class="text-2xl font-bold text-gray-800 mb-8">Vous pourriez aussi aimer</h2>
+                <div id="related-products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Related products will be added dynamically -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Swagg</h3>
+                    <p class="text-gray-400 mb-4">Votre boutique en ligne pour des vêtements et accessoires tendance qui vous permettent d'exprimer votre style unique.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition">Produits</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Informations</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conditions générales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Livraison</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>Cameroun</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2"></i>
+                            <div>
+                                <p>Orange: +237 694 938 602</p>
+                                <p>MTN: +237 679 257 080</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>contact@swagg.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Swagg. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+    <script>
+        // Quantity controls
+        document.addEventListener('DOMContentLoaded', function() {
+            const quantityInput = document.getElementById('quantity');
+            const decreaseBtn = document.getElementById('decrease-quantity');
+            const increaseBtn = document.getElementById('increase-quantity');
+            
+            if (decreaseBtn && increaseBtn && quantityInput) {
+                decreaseBtn.addEventListener('click', function() {
+                    const currentValue = parseInt(quantityInput.value);
+                    if (currentValue > 1) {
+                        quantityInput.value = currentValue - 1;
+                    }
+                });
+                
+                increaseBtn.addEventListener('click', function() {
+                    const currentValue = parseInt(quantityInput.value);
+                    quantityInput.value = currentValue + 1;
+                });
+                
+                // Ensure quantity is always at least 1
+                quantityInput.addEventListener('change', function() {
+                    if (this.value < 1) {
+                        this.value = 1;
+                    }
+                });
+            }
+            
+            // Color options
+            const colorOptions = document.querySelectorAll('.color-option');
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    colorOptions.forEach(opt => opt.classList.remove('border-gray-800'));
+                    // Add selected class to clicked option
+                    this.classList.add('border-gray-800');
+                });
+            });
+            
+            // Size options
+            const sizeOptions = document.querySelectorAll('.size-option');
+            sizeOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    sizeOptions.forEach(opt => {
+                        opt.classList.remove('bg-gray-800', 'text-white');
+                    });
+                    // Add selected class to clicked option
+                    this.classList.add('bg-gray-800', 'text-white');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Swagg</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../Swagg.jpg" alt="Swagg Logo" class="h-12 mr-3">
+                    <span class="text-2xl font-bold text-pink-600">Swagg</span>
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Accueil</a>
+                <a href="products.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Produits</a>
+                <a href="about.html" class="text-pink-600 font-medium hover:text-pink-800 transition">À propos</a>
+                <a href="contact.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <a href="cart.html" class="relative">
+                    <i class="fas fa-shopping-bag text-gray-700 text-xl hover:text-pink-600 transition"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-pink-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 space-y-2">
+                <a href="../index.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Accueil</a>
+                <a href="products.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Produits</a>
+                <a href="about.html" class="block py-2 text-pink-600 font-medium">À propos</a>
+                <a href="contact.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <div class="bg-pink-50 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">À propos de Swagg</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Découvrez notre histoire, notre mission et notre passion pour la mode.</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="À propos de Swagg" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Notre histoire</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Swagg a été fondée par Touossido Djoko Teresa Dalvina, une passionnée de mode qui a toujours rêvé de créer une boutique où chaque femme pourrait trouver des vêtements et accessoires qui reflètent sa personnalité unique.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Née d'une vision de style accessible et élégant, Swagg a commencé comme une petite boutique au Cameroun et s'est rapidement développée pour devenir une référence en matière de mode féminine.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Aujourd'hui, nous sommes fiers de proposer une sélection soigneusement choisie de vêtements, accessoires et chaussures qui allient qualité, style et prix abordables.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Notre mission</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tshirt text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Qualité</h3>
+                    <p class="text-gray-600">
+                        Nous sélectionnons soigneusement chaque article pour garantir des produits de qualité qui durent dans le temps.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Style</h3>
+                    <p class="text-gray-600">
+                        Nous proposons des designs tendance qui vous permettent d'exprimer votre personnalité et d'affirmer votre style unique.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tag text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Accessibilité</h3>
+                    <p class="text-gray-600">
+                        Nous nous efforçons de proposer des prix abordables pour que la mode de qualité soit accessible à toutes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prête à découvrir notre collection ?</h2>
+            <a href="products.html" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-medium py-3 px-8 rounded-full transition shadow-md hover:shadow-lg">
+                Voir nos produits
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Swagg</h3>
+                    <p class="text-gray-400 mb-4">Votre boutique en ligne pour des vêtements et accessoires tendance qui vous permettent d'exprimer votre style unique.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition">Produits</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Informations</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conditions générales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Livraison</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>Cameroun</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2"></i>
+                            <div>
+                                <p>Orange: +237 694 938 602</p>
+                                <p>MTN: +237 679 257 080</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>contact@swagg.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Swagg. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html> 

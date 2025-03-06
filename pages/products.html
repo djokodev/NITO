@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - Swagg</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../Swagg.jpg" alt="Swagg Logo" class="h-12 mr-3">
+                    <span class="text-2xl font-bold text-pink-600">Swagg</span>
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Accueil</a>
+                <a href="products.html" class="text-pink-600 font-medium hover:text-pink-800 transition">Produits</a>
+                <a href="about.html" class="text-gray-700 font-medium hover:text-pink-600 transition">À propos</a>
+                <a href="contact.html" class="text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <a href="cart.html" class="relative">
+                    <i class="fas fa-shopping-bag text-gray-700 text-xl hover:text-pink-600 transition"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-pink-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-pink-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 space-y-2">
+                <a href="../index.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Accueil</a>
+                <a href="products.html" class="block py-2 text-pink-600 font-medium">Produits</a>
+                <a href="about.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">À propos</a>
+                <a href="contact.html" class="block py-2 text-gray-700 font-medium hover:text-pink-600 transition">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <div class="bg-pink-50 py-8">
+        <div class="container mx-auto px-4">
+            <h1 id="category-title" class="text-3xl font-bold text-gray-800 text-center">Tous les produits</h1>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <!-- Filters and Sorting -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 space-y-4 md:space-y-0">
+                <!-- Category Filters -->
+                <div class="flex flex-wrap gap-2">
+                    <button class="category-filter bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium" data-category="all">
+                        Tous
+                    </button>
+                    <button class="category-filter bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-100" data-category="vetements">
+                        Vêtements
+                    </button>
+                    <button class="category-filter bg-white text-gray-700 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-100" data-category="accessoires">
+                        Accessoires
+                    </button>
+                </div>
+                
+                <!-- Sort and Count -->
+                <div class="flex items-center space-x-4">
+                    <span id="product-count" class="text-sm text-gray-500">8 produits</span>
+                    <div class="relative">
+                        <select id="sort-select" class="appearance-none bg-white border border-gray-300 rounded-md pl-3 pr-8 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-pink-600 focus:border-transparent">
+                            <option value="newest">Nouveautés</option>
+                            <option value="price-asc">Prix: croissant</option>
+                            <option value="price-desc">Prix: décroissant</option>
+                            <option value="name-asc">Nom: A-Z</option>
+                            <option value="name-desc">Nom: Z-A</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div id="products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Products will be loaded dynamically -->
+                <div class="animate-pulse">
+                    <div class="bg-gray-200 rounded-lg h-64 mb-4"></div>
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+                </div>
+                <div class="animate-pulse">
+                    <div class="bg-gray-200 rounded-lg h-64 mb-4"></div>
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+                </div>
+                <div class="animate-pulse">
+                    <div class="bg-gray-200 rounded-lg h-64 mb-4"></div>
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+                </div>
+                <div class="animate-pulse">
+                    <div class="bg-gray-200 rounded-lg h-64 mb-4"></div>
+                    <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                    <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Swagg</h3>
+                    <p class="text-gray-400 mb-4">Votre boutique en ligne pour des vêtements et accessoires tendance qui vous permettent d'exprimer votre style unique.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Accueil</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition">Produits</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">À propos</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Informations</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Conditions générales</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Politique de confidentialité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Livraison</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>Cameroun</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2"></i>
+                            <div>
+                                <p>Orange: +237 694 938 602</p>
+                                <p>MTN: +237 679 257 080</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>contact@swagg.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Swagg. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+    <script src="../js/products.js"></script>
+</body>
+</html> 
